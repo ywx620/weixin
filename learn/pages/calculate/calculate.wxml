@@ -1,16 +1,33 @@
-<view>答对次数：{{right}}</view>
-<view>答错次数：{{wrong}}</view>
-<view>认真想一想：{{dataPutOut}}</view>
-<view>答案是什么：{{dataPutIn}}</view>
-<button class="weui-btn" id="0" size="mini" bindtap="onclick">0</button>
-<button class="weui-btn" id="1" size="mini" bindtap="onclick">1</button>
-<button class="weui-btn" id="2" size="mini" bindtap="onclick">2</button>
-<button class="weui-btn" id="3" size="mini" bindtap="onclick">3</button>
-<button class="weui-btn" id="4" size="mini" bindtap="onclick">4</button>
-<button class="weui-btn" id="5" size="mini" bindtap="onclick">5</button>
-<button class="weui-btn" id="6" size="mini" bindtap="onclick">6</button>
-<button class="weui-btn" id="7" size="mini" bindtap="onclick">7</button>
-<button class="weui-btn" id="8" size="mini" bindtap="onclick">8</button>
-<button class="weui-btn" id="9" size="mini" bindtap="onclick">9</button>
-<button class="weui-btn" id="10" size="mini" bindtap="onclick">提交</button>
-<button class="weui-btn" id="11" size="mini" bindtap="onclick">清除</button>
+<view class="content">
+  <view class="layout-top">
+    <view class="screen">{{dataTime}}</view>
+    <view class="screen">{{dataTotal}}</view>
+    <view class="screen">{{dataRight}}</view>
+  </view>
+  <view class="layout-mid">
+    <view class="screen－mid">{{dataQuestion}}</view>
+    <view class="screen－mid">{{dataAnswer}}</view>
+  </view> 
+  <view class="layout-bottom">
+    <view class="btnGroup">
+      <view class="item blue" bindtap="clickBtn" id="9">9</view>
+      <view class="item blue" bindtap="clickBtn" id="8">8</view>
+      <view class="item blue" bindtap="clickBtn" id="7">7</view>
+    </view>
+    <view class="btnGroup">
+      <view class="item blue" bindtap="clickBtn" id="6">6</view>
+      <view class="item blue" bindtap="clickBtn" id="5">5</view>
+      <view class="item blue" bindtap="clickBtn" id="4">4</view>
+    </view>
+    <view class="btnGroup">
+      <view class="item blue" bindtap="clickBtn" id="3">3</view>
+      <view class="item blue" bindtap="clickBtn" id="2">2</view>
+      <view class="item blue" bindtap="clickBtn" id="1">1</view>
+    </view>
+    <view class="btnGroup">
+      <view class="item blue zero" bindtap="clickBtn" id="0">0</view>
+      <view class="item orange" bindtap="clickBtn" id="11">清除</view>
+      <view class="item orange" bindtap="clickBtn" id="10">提交</view>
+    </view>
+  </view>
+</view>
