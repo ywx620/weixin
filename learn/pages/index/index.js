@@ -7,7 +7,8 @@ Page({
     dataWrong: "答错：",
     dataQuestion: "题目：",
     dataAnswer: "答案：",
-    currentTab: 0
+    currentTab: 0,
+    src: 'http://xmdx.sc.chinaz.com/Files/DownLoad/sound1/201703/8400.mp3',
   },
   barIndex: 0,
   rnum: 0,
@@ -20,11 +21,15 @@ Page({
   /**
  * 生命周期函数--监听页面初次渲染完成
  */
-  onReady: function () {
+  onReady: function (e) {
+    // 使用 wx.createAudioContext 获取 audio 上下文 context
+    this.audioCtx = wx.createAudioContext('myAudio');
     this.reset();
   },
   playsound:function(){
-    wx.vibrateShort({})
+    wx.vibrateShort();
+    this.audioCtx.seek(0);
+    this.audioCtx.play();
   },
   clickBtn: function (e) {
     this.playsound()

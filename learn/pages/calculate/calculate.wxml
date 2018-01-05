@@ -1,3 +1,4 @@
+<audio id="myAudio" src="{{src}}"></audio>
 <view class="content">
   <view class="layout-top">
     <view class="screen">{{dataTime}}</view>

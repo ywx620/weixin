@@ -7,7 +7,8 @@ Page({
     dataRight: "答对：",
     dataTotal: "总题数：",
     dataQuestion: "题目：",
-    dataAnswer: "答案："
+    dataAnswer: "答案：",
+    src: 'http://xmdx.sc.chinaz.com/Files/DownLoad/sound1/201703/8400.mp3',
   },
   rnum: 0,
   wnum: 0,
@@ -20,6 +21,7 @@ Page({
   totalTime:180,
   timer:0,
   onShow(){
+    this.audioCtx = wx.createAudioContext('myAudio');
     this.reset();
   },
   onUnload: function () {
@@ -43,7 +45,13 @@ Page({
     if(num>=10)	return num;
     else				return "0"+ num;
   },
+  playsound: function () {
+    wx.vibrateShort();
+    this.audioCtx.seek(0);
+    this.audioCtx.play();
+  },
   clickBtn: function (e) {
+    this.playsound()
     var obj = e.currentTarget;
     var id = obj.id;
     //console.log(id)
