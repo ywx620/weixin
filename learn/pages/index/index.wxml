@@ -1,0 +1,37 @@
+<view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">乘法</view> 
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">除法</view> 
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">乘除法</view> 
+</view>  
+<view class="content">
+  <view class="layout-top">
+    <view class="screen">{{dataRight}}</view>
+    <view class="screen">{{dataWrong}}</view>
+  </view>
+  <view class="layout-mid">
+    <view class="screen－mid">{{dataQuestion}}</view>
+    <view class="screen－mid">{{dataAnswer}}</view>
+  </view> 
+  <view class="layout-bottom">
+    <view class="btnGroup">
+      <view class="item blue" bindtap="clickBtn" id="9">9</view>
+      <view class="item blue" bindtap="clickBtn" id="8">8</view>
+      <view class="item blue" bindtap="clickBtn" id="7">7</view>
+    </view>
+    <view class="btnGroup">
+      <view class="item blue" bindtap="clickBtn" id="6">6</view>
+      <view class="item blue" bindtap="clickBtn" id="5">5</view>
+      <view class="item blue" bindtap="clickBtn" id="4">4</view>
+    </view>
+    <view class="btnGroup">
+      <view class="item blue" bindtap="clickBtn" id="3">3</view>
+      <view class="item blue" bindtap="clickBtn" id="2">2</view>
+      <view class="item blue" bindtap="clickBtn" id="1">1</view>
+    </view>
+    <view class="btnGroup">
+      <view class="item blue zero" bindtap="clickBtn" id="0">0</view>
+      <view class="item orange" bindtap="clickBtn" id="11">清除</view>
+      <view class="item orange" bindtap="clickBtn" id="10">提交</view>
+    </view>
+  </view>
+</view>
