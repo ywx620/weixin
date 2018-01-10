@@ -27,6 +27,9 @@ Page({
   onUnload: function () {
     clearTimeout(this.timer);
   },
+  onHide: function () {
+    clearTimeout(this.timer);
+  },
   countdown: function() {
     var that=this;
     that.timer = setTimeout(function () {
